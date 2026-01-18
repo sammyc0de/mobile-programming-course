@@ -1,14 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, View } from 'react-native';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={{ fontSize: 16, fontWeight: 'bold'}}>Ensimmäinen harjoitus</Text>
+       <Button onPress={buttonPressed} title="Paina tästä" />
       <StatusBar style="auto" />
     </View>
   );
 }
+
+const buttonPressed = () => {
+  Alert.alert("Painiketta painettu");
+};
+
 
 const styles = StyleSheet.create({
   container: {
