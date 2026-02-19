@@ -58,7 +58,6 @@ const searchAddress = () => {
             style={styles.input}
             onChangeText={setAddress}
             value={address}
-            keyboardType="numeric"
       />
       <TouchableOpacity style={styles.button}> 
         <Button color="white" title="Show" onPress={searchAddress}/>      
