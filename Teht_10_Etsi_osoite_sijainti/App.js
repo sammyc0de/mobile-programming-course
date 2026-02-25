@@ -2,7 +2,7 @@
 //https://haagahelia.github.io/mobilecourse/
 //https://geocode.maps.co/docs/
 import {useState, useEffect } from 'react';
-import {Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import {Button, StyleSheet, TextInput, TouchableOpacity,KeyboardAvoidingView } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import * as Location from 'expo-location';
@@ -73,6 +73,7 @@ const searchAddress = () => {
 };
 
   return (
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding" enabled>
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>    
       <MapView
@@ -89,6 +90,7 @@ const searchAddress = () => {
       </TouchableOpacity>    
       </SafeAreaView>
     </SafeAreaProvider>
+    </KeyboardAvoidingView>
   );
 };
 
